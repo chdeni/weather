@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="text1">t = 27``C</string>
+    <string name="demoLifeCycle">Демонстрация жизненного цикла Activity</string>
+    <string name="theme">ТЕМА</string>
+    <string name="dark">ТЕМНАЯ</string>
+    <string name="temp">ТЕМПЕРАТУРА</string>
+    <string name="barometr">ДАВЛЕНИЕ</string>
+    <string name="cels">ПО ЦЕЛЬСИЮ</string>
+    <string name="farengate">ПО ФАРЕНГЕЙТУ</string>
+    <string name="mm">ММ. РТ. СТ.</string>
+    <string name="bar">БАР</string>
+    <string name="light">СВЕТЛАЯ</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="todo3">TODO</string>
 </resources>
