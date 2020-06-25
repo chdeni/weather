@@ -1,6 +1,7 @@
 package com.chdeni.weather;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -29,8 +30,9 @@ public class MainActivity extends AppCompatActivity
             instanceState = "Повторный запуск";
         }
         Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", instanceState + " - onCreate()");
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, cities);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                setContentView(R.layout.setting);
+                setContentView(R.layout.activity_main2);
             }
         });
     }
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onStart();
         Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onStart()");
     }
 
     @Override
@@ -58,6 +61,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onRestoreInstanceState(savedInstanceState);
         Toast.makeText(getApplicationContext(), "Повторный запуск! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "Повторный запуск! - onRestoreInstanceState()");
     }
 
     @Override
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onResume();
         Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onResume()");
     }
 
     @Override
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onPause();
         Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onPause()");
     }
 
     @Override
@@ -79,6 +85,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onSaveInstanceState(saveInstanceState);
         Toast.makeText(getApplicationContext(), "onSaveInstanceState()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onSaveInstanceState()");
     }
 
     @Override
@@ -86,6 +93,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onStop();
         Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onStop()");
     }
 
     @Override
@@ -93,6 +101,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onRestart();
         Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onRestart()");
     }
 
     @Override
@@ -100,5 +109,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onDestroy();
         Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        Log.d("MySCREEN", "onDestroy()");
     }
 }
